@@ -59,6 +59,14 @@ Para conocer a que instancia de kubernetes estamos conectados podemos usar el si
 $ kubectl config current-context
 ```
 
+### `cluster-info`
+
+Vemos la información de nuestro cluster:
+
+```
+$ kubectl cluster-info
+```
+
 ### `get`
 
 Para conocer a que instancia de kubernetes estamos conectados podemos usar el siguiente comando:
@@ -66,5 +74,31 @@ Para conocer a que instancia de kubernetes estamos conectados podemos usar el si
 ```
 $ kubectl get nodes
 ```
+
+### `dashboard`
+
+Sirve para crear un nuevo :
+
+```
+$ kubectl dashboard
+```
+
+### `create`
+
+Sirve para deployar nuestro Pod/Servicio/etc.. :
+
+Comando:
+
+```
+$ kubectl create -f FILENAME
+
+```
+
+Ej:
+
+```
+$ kubectl create -f mipod.yaml
+```
+
 
 
