@@ -72,8 +72,22 @@ $ kubectl cluster-info
 Para conocer a que instancia de kubernetes estamos conectados podemos usar el siguiente comando:
 
 ```
-$ kubectl get nodes
+$ kubectl get nodes/pods/rc
 ```
+Ej:
+```
+$ kubectl get pods --all-namespaces
+```
+
+
+### `describes`
+
+Para describir de manera de tallada pods, nodes y otros:
+
+```
+$ kubectl describe nodes/pods
+```
+
 
 ### `dashboard`
 
@@ -85,7 +99,7 @@ $ kubectl dashboard
 
 ### `create`
 
-Sirve para deployar nuestro Pod/Servicio/etc.. :
+Sirve para crear la `definicion` dentro del cluster de nuestro Pod/Servicio/etc.. :
 
 Comando:
 
@@ -97,8 +111,28 @@ $ kubectl create -f FILENAME
 Ej:
 
 ```
-$ kubectl create -f mipod.yaml
+$ kubectl create -f mipod.yml
 ```
+
+
+### `apply`
+
+Sirve para actualizar la `definicion` dentro del cluster de nuestro Pod/Servicio/RC/etc.. :
+
+Comando:
+
+```
+$ kubectl apply -f FILENAME
+
+```
+
+Ej:
+
+```
+$ kubectl aply -f mirc.yml
+```
+
+
 
 
 
